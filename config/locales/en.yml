@@ -1,0 +1,96 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  actions:
+    create: Create
+    delete: Delete
+    logout: Logout
+    login: Sign in
+    you_sure: Are you sure?
+    edit: Edit
+  admin:
+    translations:
+      title: Translations
+      list: List
+      missing_link: Missing
+      tools_link: Tools
+      language: Language
+      key: Key
+      value: Value
+      index:
+        results: results
+        all_languages: All languages
+        search: Search
+        no_results: No results to show
+        other_languages: Other languages
+      missing:
+        value_in: Value in
+        new_value: New value
+      tools:
+        export: Export
+        import: Import
+        download_all: Download all
+        download_pending: Download pending
+        dangerous_action: This action is potentially dangerous. Please, double check that the file format is the same as it was exported.
+        loading_file: Loading file...
+  users:
+    title: Users
+    all_users: All users
+    create_user: Create new user
+    fields:
+      password: Password
+      password_confirmation: Password confirmation
+    index:
+      no_users: There are no users to show
+  sessions:
+    new:
+      forgot_password: Forgot your password?
+  password_resets:
+    title: Reset password
+    new:
+      enter_email: 'Please enter your email:'
+      reset_my_password: Reset password
+    edit:
+      reset_password: Reset password
+      new_password: New password
+      type_again: Type in password again
+  notifier:
+    reset_password_email:
+      subject: 'Reset password instructions'
+      hello: Hello!
+      requested_password: You have requested to reset your password
+      follow_link: 'To choose a new password, just follow this follow this link:'
+      reset_password: Reset password
+      great_day: Have a great day!
+  flashes:
+    password_resets_controller:
+      user_not_found: "Sorry, we couldn't find a user with this email."
+      instructions_sent: Instructions to reset your password have been sent to your email.
+      password_updated: Password has been succesfully updated
+      password_not_set: Password was not set. Please correct the fields
+    sessions_controller:
+      login_succesful: Login successful.
+      login_failed: Login failed
+      logged_out: Logged out!
+    admin_application_controller:
+      login_first: Please login first.
+    users_controller:
+      user_created: User succesfully created
+      creation_error: There was an error
+      deletion_error: This user cannot be deleted
+      user_deleted: User succesfully deleted
+    translations_controller:
+      new_translation: "New translation created for %{key}"
+      error_creating_translation: "There has been an error creating the translation"
+      language_incorrect: "The language you are trying to translate to is not correct"
+      translations_imported: "Translations succesfully imported for %{num_of_keys} keys"
+      attach_file: "Attach a file, please"
+  path_names:
+    new: new
+    edit: edit
+  named_routes_path:
+    logout: logout
+  resources:
+    users: users
+    sessions: sessions

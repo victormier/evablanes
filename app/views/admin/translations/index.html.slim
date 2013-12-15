@@ -1,0 +1,47 @@
+- content_for :actions do
+  .info.pull-right
+    #language-form.pull-right
+      = simple_form_for :search, :url => admin_translations_url, :method => :get do |f|
+        = f.hidden_field :key, :value => @search_params[:key]
+        = f.hidden_field :value, :value => @search_params[:value]
+        = f.input :language, :collection => [[t('.all_languages'),'tots']].concat(LANGUAGES), :include_blank => false, :selected => @search_params[:language], :label => false, :input_html => {:class => 'submit-on-change input-medium'}
+    h4#results.pull-right
+      =' @translations.total_entries
+      = t('.results')
+
+= render 'header'
+
+#search-form
+  = simple_form_for :search, :url => admin_translations_path, :method => :get do |f|
+    = f.hidden_field :language, :value => @search_params['language']
+    = f.input :key, :as => :string, :label => t('key', scope: 'admin.translations'), :required => false, :input_html => { :value => @search_params[:key], :class => 'input-medium' }
+    = f.input :value, :as => :string, :label => t('value', scope: 'admin.translations'), :required => false,  :input_html => { :value => @search_params[:value], :class => 'input-large' }
+    = f.button :submit, t('.search')
+
+- if @translations.any?
+  #translations-table
+    = will_paginate @translations
+    = render 'translations_table', :translations => @translations, :with_other => true
+    = will_paginate @translations
+- else
+  .leader.well= t('no_results')
+
+#translations-modal.modal.hide.fade
+  .modal-header
+    button.close data-dismiss="modal" x
+    h3= t('.other_languages')
+  .modal-body
+
+- content_for :custom_js do
+  javascript:
+    $(document).ready(
+      function(){
+        $("a.other_langs").bind("ajax:success",
+          function(evt, data, status, xhr){
+            $("#translations-modal .modal-body").html(data);
+            $("#translations-modal").modal();
+          }).bind("ajax:error",
+          function(evt, data, status, xhr){
+            console.log('error retrieving data')
+          });
+    });

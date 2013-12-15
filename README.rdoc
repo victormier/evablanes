@@ -1,0 +1,49 @@
+== Welcome to Base
+
+Base is a Rails application template with a bootstrap based backoffice and frontend.
+
+== Installation
+
+## Trouble with running migrations
+
+There's a known problem with translations related routes if translations table is not created. Just comment these lines in <tt>config/routes.rb</tt>, apply the migrations, and uncomment again:
+
+  # mount Interpret::Engine => "/admin/interpret"
+
+  # localized(LOCALES_STRING) do
+    # resources :sessions, only: [:new, :create, :destroy]
+    # resources :password_resets, only: [:new, :create, :edit, :update]
+  # end
+
+== Deployment
+
+There's a <tt>deploy</tt> rake task that deploys to heroku. Still not much tested. For setting it up you have to change the following lines in <tt>lib/tasks/deploy.rake</tt> (just the production one if you don't have a staging environment):
+
+  PRODUCTION_APP = 'YOUR_PRODUCTION_APP_NAME_ON_HEROKU'
+  STAGING_APP = 'YOUR_STAGING_APP_NAME_ON_HEROKU'
+
+It marks deploys as releases and there are several tasks. The main one is:
+
+  rake deploy_production
+
+which runs the following tasks
+
+  rake deploy:push
+  rake deploy:migrate
+  rake deploy:interpret
+  rake deploy:restart
+  rake deploy:tag
+
+It is important not to miss the interpret update task, because otherways new translations won't work as expected.
+
+== Frontend
+
+There's a <tt>app/assets/stylesheets/frontend/base_variables.less</tt> file on which you can override bootstrap base variables.
+
+For style development you can turn on Livereload, which connects rails to the browser, compiles styles and scripts and updates the browser as you save. Just start  process like this:
+
+  guard -P livereload
+
+== Backoffice
+
+User management: Sorcery
