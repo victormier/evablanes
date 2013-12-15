@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+  include ArmotReloading
   include RankedModel
 
   ranks :sort_order
@@ -21,6 +22,7 @@ class Project < ActiveRecord::Base
 
   before_validation :set_order, on: :create
   before_save :set_slug, on: :create
+  after_save :reload_armot!
 
   scope :ordered, rank(:sort_order)
   scope :published, where(published: true)
