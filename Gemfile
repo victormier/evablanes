@@ -12,6 +12,7 @@ gem 'pg'
 # Frontend
 gem 'slim-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'simple_form'
 gem 'best_in_place'
 gem 'will_paginate'
@@ -29,6 +30,8 @@ gem 'i18n-active_record', :git => "git://github.com/rogercampos/i18n-active_reco
 
 # Utils
 gem 'roo'
+gem 'ranked-model'
+
 # File management
 gem 'carrierwave'
 gem 'mini_magick'
