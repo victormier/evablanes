@@ -7,3 +7,11 @@
       | I PROMISE TO SEND YOU ONLY NICE THINGS
       .newsletter-form
         input.newsletter-input.span3(type='text' placeholder='Write your email address.')
+    .footer-social
+      ul.social-links
+        li.social-link= link_to '#', target: '_blank' do
+          = image_tag asset_path('social_flickr.png')
+        li.social-link= link_to '#', target: '_blank' do
+          = image_tag asset_path('social_linkedin.png')
+        li.social-link= link_to '#', target: '_blank' do
+          = image_tag asset_path('social_behance.png')

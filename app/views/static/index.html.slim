@@ -1,3 +1,15 @@
+- if @slider_projects.any?
+  #project-slider.carousel.slide
+    .carousel-inner
+      - @slider_projects.each_with_index do |project, index|
+        - klass = index == 0 ? 'active' : ''
+        .item(class=klass)= image_tag project.slider_picture.standard
+
+    a.slider-control.left(href="#project-slider" data-slide="prev")
+      = image_tag asset_path('slider_left_arr.png')
+    a.slider-control.right(href="#project-slider" data-slide="next")
+      = image_tag asset_path('slider_right_arr.png')
+
 - if @featured_projects.any?
   .featured-projects
     .featured-projects-title.filet-title
