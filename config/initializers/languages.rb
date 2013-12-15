@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 I18n.default_locale = :en
-ADMIN_LOCALE = :en
+ADMIN_LOCALE = :ca
 
 LANGUAGES_BY_LOCALE = {
   "en" => 'English',
