@@ -1,0 +1,37 @@
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+.main-content {
+  padding-top: @basePadding;
+}
+
+.filet-title {
+  position: relative;
+  font-size: 22px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: @basePadding*2 - 12;
+
+  .filet-title-text {
+    padding: 0 @basePadding;
+    background-color: white;
+    font-weight: 200;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid @grayLight;
+    bottom: 12px;
+    z-index: -1;
+  }
+}
+
+.red {
+  color: @red;
+}

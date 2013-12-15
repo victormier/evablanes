@@ -1,1 +1,15 @@
-| Hello!
+- if @featured_projects.any?
+  .featured-projects
+    .featured-projects-title.filet-title
+      span.filet-title-text FEATURED PROJECTS
+
+    .row
+      - @featured_projects.each do |project|
+        .span2
+          .featured-project
+            .featured-project-image= link_to '#' do
+              = image_tag project.featured_project_picture.standard
+            .featured-project-title= link_to '#' do
+              =' project.title.upcase
+              | &rarr;
+            .featured-project-description= project.description.html_safe

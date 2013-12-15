@@ -1,0 +1,25 @@
+.container
+  header
+    .header
+      .row
+        .span2
+          .header-title Eva Blanes
+          .header-subtitle
+            | Graphic design
+            br
+            | &amp; Art direction
+        .span4
+          .header-toplinks
+            ul.header-languages
+              - klass = I18n.locale == :en ? 'active' : ''
+              li.header-language= link_to 'English', '#', class: klass
+              - klass = I18n.locale == :ca ? 'active' : ''
+              li.header-language= link_to 'Català', '#', class: klass
+              - klass = I18n.locale == :es ? 'active' : ''
+              li.header-language= link_to 'Castellano', '#', class: klass
+          ul.header-nav
+            li.header-nav-link= active_link_to 'CONTACT', '#'
+            li.header-nav-link= active_link_to 'PUBLICATIONS', '#'
+            li.header-nav-link= active_link_to 'ABOUT ME', '#'
+            li.header-nav-link= active_link_to 'PHOTOGRAPHY', '#'
+            li.header-nav-link= active_link_to 'WORK', '#'

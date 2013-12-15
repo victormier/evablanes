@@ -3,7 +3,10 @@ html(lang=I18n.locale)
   = render "shared/head"
 
   body(class=view_id)
-    = yield
+    = render 'shared/header'
+    .main-content.container
+      = yield
+    = render 'shared/footer'
 
   = javascript_include_tag :application
   = yield :custom_js
