@@ -1,0 +1,22 @@
+- content_for :actions do
+  = link_to 'Nova Imatge', new_admin_project_project_picture_path(@project.id), class: "btn btn-success pull-right"
+
+= render 'admin/projects/edit_header'
+
+project-pictures-list
+  - if @project_pictures.any?
+
+    table.table.table-striped.sortable(update_url=sort_admin_project_pictures_path)
+      thead
+        tr
+          th Picture
+          th
+
+      thbody
+        - @project_pictures.each do |pic|
+          tr.item(item_id=pic.id)
+            td= image_tag pic.picture.mini.url
+            td
+              = link_to 'Delete', [:admin, pic], :confirm => "N'estàs segur?", :method => :delete, :class => "btn btn-danger btn-mini pull-right"
+  - else
+    #none.well No hi ha imatges

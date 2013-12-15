@@ -1,0 +1,9 @@
+= render 'admin/projects/edit_header'
+
+#project-pictures-form
+  = simple_form_for @project_picture, url: admin_project_project_pictures_path(@project.id), html: { :class => "form-horizontal" }, defaults: { wrapper: :with_controls, label_html: { class: 'form--horizontal__control-label' } } do |f|
+
+    = f.input :picture, :label => "Picture"
+
+    .controls
+      = f.submit 'Crear', :class => "btn btn-primary"

@@ -1,14 +1,14 @@
 module Admin::ApplicationHelper
   def activable_link_to(name, options = {}, html_options = {})
     if html_options.key?(:class)
-      html_options.merge!({ :class => html_options[:class] + ' active' }) if current_page?(options)
+      html_options.merge!({ :class => html_options[:class] + ' active' }) if admin_current_page?(options)
     else
-      html_options.merge!({ :class => 'active' }) if current_page?(options)
+      html_options.merge!({ :class => 'active' }) if admin_current_page?(options)
     end
     link_to name, options, html_options
   end
 
-  def current_page?(page)
+  def admin_current_page?(page)
     path = request.env['PATH_INFO']
 
     page_root = /(\/admin\/[^\/]+)\/?.*/.match(page).try(:[], 1)
@@ -24,5 +24,17 @@ module Admin::ApplicationHelper
     content_tag(:li, :class => classes) do
       yield
     end
+  end
+
+  def with_publication(obj)
+    yield(obj.published? ? ['Publicat', 'btn-info'] : ['Publicar', ''])
+  end
+
+  def with_featuring(obj)
+    yield(obj.featured? ? ['Destacat', 'btn-success'] : ['Destacar', ''])
+  end
+
+  def with_slider(obj)
+    yield(obj.in_slider? ? ['Al Slider', 'btn-success'] : ['Mostrar al Slider', ''])
   end
 end

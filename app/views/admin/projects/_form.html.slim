@@ -1,0 +1,22 @@
+.projects-form
+  - form_url = @project.new_record? ? admin_projects_path(@section) : admin_project_path(@project.id)
+  = simple_form_for [:admin, @project], url: form_url, html: { class: "form-horizontal"}, defaults: { wrapper: :with_controls, label_html: { class: 'form--horizontal__control-label' } } do |f|
+
+    ul.nav.nav-tabs.row-fluid
+      - LANGUAGES.each_with_index do |language, index|
+        li class="#{index == 0 ? 'active' : ''}"
+          = link_to language.first, "##{language.last}", :"data-toggle" => "tab"
+
+    .tab-content.row-fluid.trailer
+      - LANGUAGES.map(&:last).each_with_index do |language, index|
+        .tab-pane.multilanguage-attributes id=language class="#{index == 0 ?  'active' : ''}"
+          = f.input "title_#{language}", label: "Títol (#{language})"
+          = f.input "subtitle_#{language}", label: "Subtítol (#{language})", as: :redactor
+          = f.input "description_#{language}", label: "Descripció (#{language})", as: :redactor
+
+    = f.input :cover_picture
+    = f.input :featured_project_picture
+    = f.input :slider_picture
+
+    .controls
+      = f.button :submit, @project.new_record? ? "Create" : "Save", class: 'btn-success'

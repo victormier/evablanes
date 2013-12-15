@@ -3,6 +3,16 @@ Evablanes::Application.routes.draw do
 
   # Backoffice
   namespace :admin do
+    resources :projects, except: [:show] do
+      post :toggle_published, :on => :member
+      post :toggle_featured, :on => :member
+      post :toggle_in_slider, :on => :member
+      post :sort, :on => :collection
+      resources :project_pictures, only: [:index, :new, :create]
+    end
+    resources :project_pictures, only: [:destroy] do
+      post :sort, :on => :collection
+    end
     resources :users, only: [:index, :new, :create, :destroy]
     resources :translations, :only => [:index, :create] do
       get :other_langs, :on => :member

@@ -1,0 +1,37 @@
+- content_for :actions do
+  = link_to 'New Project', new_admin_project_path(@section), class: "btn btn-success pull-right"
+
+= render 'header'
+
+- if @projects.any?
+  table.table.table-striped.sortable(update_url=sort_admin_projects_path)
+    thead
+      tr
+        th
+        th
+        th Títol
+        th Subtítol
+        th
+    tbody
+      - @projects.each do |project|
+        tr.item(item_id=project.id)
+          td
+            - with_publication(project) do |copy, klass|
+              = link_to copy, toggle_published_admin_project_path(project.id), :method => :post, class: "btn btn-mini #{klass}"
+            - with_featuring(project) do |copy, klass|
+              = link_to copy, toggle_featured_admin_project_path(project.id), :method => :post, class: "btn btn-mini #{klass}"
+            - with_slider(project) do |copy, klass|
+              = link_to copy, toggle_in_slider_admin_project_path(project.id), :method => :post, class: "btn btn-mini #{klass}"
+          td
+            - if project.cover_picture.present?
+              = image_tag project.cover_picture.mini.url
+            - else
+              | No picture
+          td= project.title
+          td= project.subtitle.html_safe
+          td
+            = link_to t('delete', scope: 'actions'), admin_project_path(project.id), confirm: t('you_sure', scope: 'actions'), :method => :delete, class: "btn btn-danger btn-small pull-right"
+            = link_to t('edit', scope: 'actions'), admin_project_project_pictures_path(project.id), class: "btn btn-warning btn-small pull-right"
+- else
+  .well
+    | No hi ha projectes
