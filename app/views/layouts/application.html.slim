@@ -4,7 +4,8 @@ html(lang=I18n.locale)
 
   body(class=view_id)
     = render 'shared/header'
-    .main-content.container
+    - klass = current_page?(root_path) ? '' : 'container'
+    .main-content(class=klass)
       = yield
     = render 'shared/footer'
 
