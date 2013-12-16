@@ -4,4 +4,7 @@ class StaticController < ApplicationController
     @featured_projects = Project.published.featured.ordered.limit(3)
     @some_projects = Project.published.ordered.limit(8)
   end
+
+  def about
+  end
 end

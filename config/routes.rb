@@ -32,6 +32,8 @@ Evablanes::Application.routes.draw do
       resources :password_resets, only: [:new, :create, :edit, :update]
     end
 
+    match 'about' => 'static#about', as: :about
+
     # Sessions
     get 'logout' => 'sessions#destroy', as: 'logout'
     get 'login' => 'sessions#new', as: 'login'

@@ -91,6 +91,7 @@ en:
     edit: edit
   named_routes_path:
     logout: logout
+    about: about
   resources:
     users: users
     sessions: sessions
