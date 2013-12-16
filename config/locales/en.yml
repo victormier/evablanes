@@ -94,3 +94,4 @@ en:
   resources:
     users: users
     sessions: sessions
+    projects: projects

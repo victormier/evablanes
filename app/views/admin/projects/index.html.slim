@@ -8,7 +8,8 @@
     thead
       tr
         th
-        th
+        th Cover
+        th Nº Columnes Cover
         th Títol
         th Subtítol
         th
@@ -27,6 +28,7 @@
               = image_tag project.cover_picture.mini.url
             - else
               | No picture
+          td= project.cover_cols
           td= project.title
           td= project.subtitle.html_safe
           td

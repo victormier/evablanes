@@ -85,3 +85,4 @@ ca:
   resources:
     users: usuaris
     sessions: sessions
+    projects: projectes

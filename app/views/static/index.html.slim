@@ -19,9 +19,9 @@
       - @featured_projects.each do |project|
         .span2
           .featured-project
-            .featured-project-image= link_to '#' do
+            .featured-project-image= link_to project_path(project) do
               = image_tag project.featured_project_picture.standard
-            .featured-project-title= link_to '#' do
+            .featured-project-title= link_to project_path(project) do
               =' project.title.upcase
               | &rarr;
             .featured-project-description= project.description.html_safe

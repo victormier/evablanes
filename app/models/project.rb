@@ -18,7 +18,7 @@ class Project < ActiveRecord::Base
 
   attr_accessible :title_en, :title_es, :title_ca, :subtitle_en, :subtitle_es, :subtitle_ca,
     :description_en, :description_es, :description_ca,
-    :cover_picture, :featured_project_picture, :slider_picture, :sort_order
+    :cover_picture, :featured_project_picture, :slider_picture, :sort_order, :cover_cols
 
   before_validation :set_order, on: :create
   before_save :set_slug, on: :create

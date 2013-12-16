@@ -1,0 +1,6 @@
+.projects
+  .row
+    - @projects.each do |project|
+      .project(class="span#{project.cover_cols}")
+        = link_to project_path(project) do
+          = image_tag project.cover_picture.send("cols_#{project.cover_cols}"), class: 'project-cover-image'

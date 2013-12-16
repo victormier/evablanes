@@ -1,0 +1,30 @@
+.projects {
+  &.index {
+    .project {
+      display: inline-block;
+    }
+    .project-cover-image {
+      margin-bottom: @basePadding;
+    }
+  }
+  &.show {
+    .project-information {
+      margin-bottom: @basePadding*2;
+      font-weight: 200;
+    }
+    .project-title, .project-subtitle {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    .project-title {
+      color: @red;
+    }
+    .project-description {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .project-picture {
+      margin-bottom: @basePadding;
+    }
+  }
+}

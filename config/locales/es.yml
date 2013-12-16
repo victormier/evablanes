@@ -85,3 +85,4 @@ es:
   resources:
     users: usuarios
     sessions: sesiones
+    projects: projectes
