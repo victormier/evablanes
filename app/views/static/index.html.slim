@@ -53,4 +53,11 @@
           | - coming soon -
 
 .container
-  = render 'projects/project_list', projects: @some_projects
+  .some_work
+    .some_work-projects-title.filet-title
+          span.filet-title-text SOME OF MY WORK
+    = render 'projects/project_list', projects: @some_projects
+    .some_work-link
+      = link_to projects_path do
+        ' SEE ALL MY WORK HERE
+        span.r-arrow &nbsp;&rarr;

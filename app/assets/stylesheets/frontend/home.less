@@ -38,12 +38,26 @@
 .link-block-title {
   font-size: 22px;
   margin-bottom: @basePadding*1.5;
-
-  .r-arrow {
-    color: @red;
-  }
 }
 .link-block-description {
   font-size: 18px;
   line-height: 23px;
+}
+
+// SOME WORK /////////////////////////////////
+.some_work {
+  margin-bottom: @basePadding;
+}
+.some_work-link {
+  text-align: right;
+  font-size: 18px;
+
+  a {
+    color: @gray;
+    font-weight: 200;
+
+    &:hover {
+      color: @red;
+    }
+  }
 }
