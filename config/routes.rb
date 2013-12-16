@@ -32,7 +32,7 @@ Evablanes::Application.routes.draw do
   scope ":i18n_locale" do
     localized(LOCALES_STRING) do
       resources :projects, only: [:index, :show]
-      resources :contact, only: [:index, :create]
+      resources :contact, controller: :contact, only: [:index, :create]
       resources :photos, only: [:index]
       resources :sessions, only: [:new, :create, :destroy]
       resources :password_resets, only: [:new, :create, :edit, :update]
