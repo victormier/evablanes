@@ -11,6 +11,7 @@
       - LANGUAGES.map(&:last).each_with_index do |language, index|
         .tab-pane.multilanguage-attributes id=language class="#{index == 0 ?  'active' : ''}"
           = f.input "title_#{language}", label: "Títol (#{language})"
+          = f.input "cover_title_#{language}", label: "Títol del Rollover (#{language})"
           = f.input "subtitle_#{language}", label: "Subtítol (#{language})", as: :redactor
           = f.input "description_#{language}", label: "Descripció (#{language})", as: :redactor
 

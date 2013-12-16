@@ -6,8 +6,8 @@ class Project < ActiveRecord::Base
 
   has_many :project_pictures
 
-  armotize :title, :subtitle, :description
-  define_localized_accessors_for :title, :subtitle, :description
+  armotize :title, :subtitle, :description, :cover_title
+  define_localized_accessors_for :title, :subtitle, :description, :cover_title
 
   mount_uploader :cover_picture, ProjectCoverPictureUploader
   mount_uploader :featured_project_picture, FeaturedProjectPictureUploader
@@ -18,7 +18,7 @@ class Project < ActiveRecord::Base
 
   attr_accessible :title_en, :title_es, :title_ca, :subtitle_en, :subtitle_es, :subtitle_ca,
     :description_en, :description_es, :description_ca,
-    :cover_picture, :featured_project_picture, :slider_picture, :sort_order, :cover_cols
+    :cover_picture, :featured_project_picture, :slider_picture, :sort_order, :cover_cols, :cover_title_en, :cover_title_es, :cover_title_ca
 
   before_validation :set_order, on: :create
   before_save :set_slug, on: :create

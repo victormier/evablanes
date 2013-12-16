@@ -21,11 +21,43 @@
   }
 }
 
+.project-hover-title {
+  transition: all 0.3s ease;
+  display: block;
+  position: absolute;
+  width: 350px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
+  padding: @basePadding*2 @basePadding*1.5;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 46px;
+  text-shadow: 0 0 8px #777;
+  opacity: 0;
+
+  .project-hover-cta {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
 .project-list {
   .project {
     display: inline-block;
   }
   .project-cover-image {
     margin-bottom: @basePadding;
+  }
+  .project-cover {
+    position: relative;
+
+    &:hover {
+      .project-hover-title {
+        opacity: 1.0;
+      }
+    }
   }
 }
