@@ -13,6 +13,10 @@ Evablanes::Application.routes.draw do
     resources :project_pictures, only: [:destroy] do
       post :sort, :on => :collection
     end
+    resources :photos, only: [:index, :new, :create, :destroy] do
+      post :sort, :on => :collection
+      post :toggle_published, :on => :member
+    end
     resources :users, only: [:index, :new, :create, :destroy]
     resources :translations, :only => [:index, :create] do
       get :other_langs, :on => :member
@@ -22,13 +26,14 @@ Evablanes::Application.routes.draw do
       post :import, :on => :collection
     end
 
-    root to: 'users#index'
+    root to: 'projects#index'
   end
 
   scope ":i18n_locale" do
     localized(LOCALES_STRING) do
       resources :projects, only: [:index, :show]
       resources :contact, only: [:index, :create]
+      resources :photos, only: [:index]
       resources :sessions, only: [:new, :create, :destroy]
       resources :password_resets, only: [:new, :create, :edit, :update]
 

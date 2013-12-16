@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131215235804) do
+ActiveRecord::Schema.define(:version => 20131216032520) do
+
+  create_table "photos", :force => true do |t|
+    t.string   "picture"
+    t.integer  "sort_order"
+    t.boolean  "published",  :default => true
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
 
   create_table "project_pictures", :force => true do |t|
     t.string   "picture"
@@ -36,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20131215235804) do
     t.datetime "created_at",                                  :null => false
     t.datetime "updated_at",                                  :null => false
     t.string   "cover_cols"
+    t.string   "cover_title"
   end
 
   create_table "translations", :force => true do |t|

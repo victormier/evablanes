@@ -1,0 +1,26 @@
+- content_for :actions do
+  = link_to 'Nova Imatge', new_admin_photo_path, class: "btn btn-success pull-right"
+
+= render 'header'
+
+project-pictures-list
+  - if @photos.any?
+
+    table.table.table-striped.sortable(update_url=sort_admin_photos_path)
+      thead
+        tr
+          td
+          th Picture
+          th
+
+      thbody
+        - @photos.each do |photo|
+          tr.item(item_id=photo.id)
+            td
+              - with_publication(photo) do |copy, klass|
+                = link_to copy, toggle_published_admin_photo_path(photo.id), :method => :post, class: "btn btn-mini #{klass}"
+            td= image_tag photo.picture.mini.url
+            td
+              = link_to 'Delete', [:admin, photo], :confirm => "N'estàs segur?", :method => :delete, :class => "btn btn-danger btn-mini pull-right"
+  - else
+    #none.well No hi ha imatges
