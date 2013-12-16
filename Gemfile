@@ -9,6 +9,9 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
+# Web server
+gem 'thin'
+
 # Frontend
 gem 'slim-rails'
 gem 'jquery-rails'
@@ -57,7 +60,6 @@ end
 
 # Development
 group :development do
-  gem 'thin'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'guard-livereload', require: false
