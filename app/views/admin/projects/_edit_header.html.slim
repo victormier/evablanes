@@ -9,9 +9,9 @@
       ' Editant
       = @project.title
   ul.nav.nav-pills.pull-left
-    li class=(controller_name == 'project_pictures' ? 'active' : '' )
-      = link_to "Pictures", admin_project_project_pictures_path(@project.id)
     li class=(controller_name == 'projects' ? 'active' : '' )
       = link_to "Info", edit_admin_project_path(@project.id)
+    li class=(controller_name == 'project_pictures' ? 'active' : '' )
+      = link_to "Pictures", admin_project_project_pictures_path(@project.id)
   .info.pull-right
     = yield :actions
