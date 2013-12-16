@@ -9,23 +9,23 @@ class ProjectCoverPictureUploader < ImageUploader
     process :resize_to_fill => [940, 440]
   end
 
-  version :cols_5, :from_version => :cols_6 do
+  version :cols_5 do
     process :resize_to_fill => [780, 440]
   end
 
-  version :cols_4, :from_version => :cols_5 do
+  version :cols_4 do
     process :resize_to_fill => [620, 440]
   end
 
-  version :cols_3, :from_version => :cols_4 do
+  version :cols_3 do
     process :resize_to_fill => [460, 440]
   end
 
-  version :cols_2, :from_version => :cols_3 do
+  version :cols_2 do
     process :resize_to_fill => [300, 440]
   end
 
-  version :cols_1, :from_version => :cols_2 do
+  version :cols_1 do
     process :resize_to_fill => [140,440]
   end
 
