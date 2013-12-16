@@ -28,11 +28,12 @@ Evablanes::Application.routes.draw do
   scope ":i18n_locale" do
     localized(LOCALES_STRING) do
       resources :projects, only: [:index, :show]
+      resources :contact, only: [:index, :create]
       resources :sessions, only: [:new, :create, :destroy]
       resources :password_resets, only: [:new, :create, :edit, :update]
-    end
 
-    match 'about' => 'static#about', as: :about
+      match 'about' => 'static#about', as: :about
+    end
 
     # Sessions
     get 'logout' => 'sessions#destroy', as: 'logout'

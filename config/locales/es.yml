@@ -82,8 +82,9 @@ es:
     edit: editar
   named_routes_path:
     logout: logout
-    about: about
+    about: sobre-mi
   resources:
     users: usuarios
     sessions: sesiones
     projects: projectes
+    contact: contacto

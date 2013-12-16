@@ -1,0 +1,35 @@
+.contact-index.row
+  .span4
+    .contact-form
+      .contact-title FILL OUT THIS FORM
+
+      = form_tag contact_index_path do
+        .contact-form_unit
+          .contact-form_label= label_tag 'Name'
+          .contact-form_input= text_field_tag :name, nil, class: 'span4'
+        .contact-form_unit
+          .contact-form_label= label_tag 'Company'
+          .contact-form_input= text_field_tag :company, nil, class: 'span4'
+        .contact-form_unit
+          .contact-form_label= label_tag 'Email'
+          .contact-form_input= text_field_tag :email, nil, class: 'span4'
+        .contact-form_unit
+          .contact-form_label= label_tag 'Phone number'
+          .contact-form_input= text_field_tag :phone, nil, class: 'span4'
+        .contact-form_unit
+          .contact-form_label= label_tag 'Message'
+          .contact-form_input= text_area_tag :message, nil, class: 'span4'
+        .contact-form_actions
+          = submit_tag 'SUBMIT', class: 'btn'
+
+  .span2
+    .contact-title OR CONTACT ME
+    p eva@evablanes@gmail.com
+    p
+      | Barcelona
+      br
+      | (+34) 619 48 91 37
+    p
+      | San Francisco
+      br
+      | (415) 687-1771
