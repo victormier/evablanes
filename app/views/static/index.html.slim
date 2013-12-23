@@ -8,7 +8,7 @@
             = link_to project_path(project), class: 'project-slide' do
               = image_tag project.slider_picture.standard
               .project-hover-title
-                = project.cover_title.upcase unless project.cover_title.nil?
+                = project.cover_title.upcase.html_safe unless project.cover_title.nil?
                 .project-hover-cta SEE MORE &nbsp;&nbsp;&rarr;
 
       a.slider-control.left(href="#project-slider" data-slide="prev")
