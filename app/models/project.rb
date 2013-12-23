@@ -18,13 +18,16 @@ class Project < ActiveRecord::Base
 
   attr_accessible :title_en, :title_es, :title_ca, :subtitle_en, :subtitle_es, :subtitle_ca,
     :description_en, :description_es, :description_ca,
-    :cover_picture, :featured_project_picture, :slider_picture, :sort_order, :cover_cols, :cover_title_en, :cover_title_es, :cover_title_ca
+    :cover_picture, :featured_project_picture, :slider_picture, :sort_order, :cover_cols, :cover_title_en, :cover_title_es, :cover_title_ca,
+    :slider_order, :featured_order
 
   before_validation :set_order, on: :create
   before_save :set_slug, on: :create
   after_save :reload_armot!
 
   scope :ordered, rank(:sort_order)
+  scope :featured_ordered, order(:featured_order)
+  scope :slider_ordered, order(:slider_order)
   scope :published, where(published: true)
   scope :in_slider, where(in_slider: true)
   scope :featured, where(featured: true)
