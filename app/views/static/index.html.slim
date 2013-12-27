@@ -37,25 +37,23 @@
   .container
     .row
       .span2
-        .link-block-title
+        = link_to about_path, class: 'link-block-title' do
           ' ABOUT ME
           span.r-arrow &rarr;
         .link-block-description
           | I’m Eva, a graphic designer from Barcelona and now living in San Francisco. I’m specialized in website design and branding, and I Accatem et alibus consequam exernate nonseque volecae paruptatas ditiber fernatem facereptat et harum acipiendi quas sint eatus aligenditet dellaccabore res remodita et ccate estintianiet etus, ute provit eatas.
       .span2
-        .link-block-title
+        = link_to photos_path, class: 'link-block-title' do
           ' PHOTOGRAPHY
           span.r-arrow &rarr;
         .link-block-description= image_tag asset_path('home_photography.jpg')
       .span2
-        .link-block-title
+        = link_to about_path, class: 'link-block-title' do
           ' PUBLICATIONS
-          span.r-arrow &rarr;
+          span.small COMING SOON
         .link-block-description
+          = image_tag asset_path('publications.jpg')
           | During my professional career, I got one award, and my projects had been publicated in some international books.
-          br
-          br
-          | - coming soon -
 
 .container
   .some_work

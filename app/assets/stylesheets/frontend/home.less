@@ -47,12 +47,25 @@
   margin-bottom: @basePadding*2;
 }
 .link-block-title {
-  font-size: 22px;
-  margin-bottom: @basePadding*1.5;
+  font-size: 20px;
+  color: @textColor;
+
+  .small {
+    color: @red;
+  }
+
+  &:hover {
+    color: @red;
+  }
 }
 .link-block-description {
+  margin-top: @basePadding*1.5;
   font-size: 18px;
   line-height: 23px;
+
+  img {
+    margin-bottom: @basePadding;
+  }
 }
 
 // SOME WORK /////////////////////////////////
