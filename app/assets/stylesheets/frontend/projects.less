@@ -25,21 +25,22 @@
   transition: all 0.3s ease;
   display: block;
   position: absolute;
-  width: 350px;
   top: 0;
   left: 0;
-  bottom: 0;
+  right: 0;
+  bottom: @basePadding;
   color: white;
-  padding: @basePadding*2 @basePadding*1.5;
+  padding: @basePadding*1.5;
   letter-spacing: 1px;
   font-weight: 600;
   font-size: 42px;
   line-height: 46px;
   text-shadow: 0 0 8px #777;
   opacity: 0;
+  background-color: fadeout(@red, 5%);
 
-  &.project-cover-title-1, &.project-cover-title-2, &.project-cover-title-3 {
-    margin-top: 10px;
+  .project-cover-title {
+    width: 350px;
   }
 
   &.project-cover-title-1, &.project-cover-title-2 {
