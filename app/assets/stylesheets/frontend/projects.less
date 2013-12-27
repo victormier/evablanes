@@ -28,7 +28,7 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: @basePadding;
+  bottom: 0;
   color: white;
   padding: @basePadding*1.5;
   letter-spacing: 1px;
@@ -50,6 +50,8 @@
 
   .project-hover-cta {
     font-size: 16px;
+    line-height: 16px;
+    margin-top: @basePadding;
     font-weight: 400;
   }
 }
@@ -58,11 +60,9 @@
   .project {
     display: inline-block;
   }
-  .project-cover-image {
-    margin-bottom: @basePadding;
-  }
   .project-cover {
     position: relative;
+    margin-bottom: @basePadding;
 
     &:hover {
       .project-hover-title {
