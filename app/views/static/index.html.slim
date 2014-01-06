@@ -9,7 +9,9 @@
               = image_tag project.slider_picture.standard
               .project-hover-title
                 = project.cover_title.upcase.html_safe unless project.cover_title.nil?
-                .project-hover-cta SEE MORE &nbsp;&nbsp;&rarr;
+                .project-hover-cta
+                  =' t('.see_more')
+                  | &nbsp;&nbsp;&rarr;
 
       a.slider-control.left(href="#project-slider" data-slide="prev")
         = image_tag asset_path('slider_left_arr.png')
@@ -20,7 +22,7 @@
   .container
     .featured-projects
       .featured-projects-title.filet-title
-        span.filet-title-text FEATURED PROJECTS
+        span.filet-title-text= t('.featured_projects')
 
       .row
         - @featured_projects.each do |project|
@@ -38,7 +40,7 @@
     .row
       .span2
         = link_to about_path, class: 'link-block-title' do
-          ' ABOUT ME
+          '= t('.about_me')
           span.r-arrow &rarr;
         .link-block-description
           |  I’m Eva, a graphic designer from Barcelona based in San Francisco.
@@ -50,13 +52,13 @@
           | .
       .span2
         = link_to photos_path, class: 'link-block-title' do
-          ' PHOTOGRAPHY
+          =' t('.photography')
           span.r-arrow &rarr;
         .link-block-description= image_tag asset_path('home_photography.jpg')
       .span2
         = link_to about_path, class: 'link-block-title' do
-          ' PUBLICATIONS
-          span.small COMING SOON
+          =' t('.publications')
+          span.small= t('.coming_soon')
         .link-block-description
           = image_tag asset_path('publications.jpg')
           | During my professional career, I got one award, and my projects had been publicated in some international books
@@ -64,9 +66,9 @@
 .container
   .some_work
     .some_work-projects-title.filet-title
-          span.filet-title-text SOME OF MY WORK
+          span.filet-title-text= t('.some_work')
     = render 'projects/project_list', projects: @some_projects
     .some_work-link
       = link_to projects_path do
-        ' SEE ALL MY WORK HERE
+        =' t('.see_all_work')
         span.r-arrow &nbsp;&rarr;

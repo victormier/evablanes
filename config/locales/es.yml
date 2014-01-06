@@ -1,4 +1,30 @@
 es:
+  shared:
+    header:
+      contact: CONTACTO
+      publications: PUBLICACIONES
+      about_me: SOBRE MI
+      photography: FOTOGRAFÍA
+      work: PORTFOLIO
+  static:
+    index:
+      see_more: VER MÁS
+      featured_projects: PROYECTOS DESTACADOS
+      about_me: SOBRE MI
+      photography: FOTOGRAFÍA
+      publications: PUBLICACIONES
+      coming_soon: PRÓXIMAMENTE
+      some_work: ALGUNOS PROYECTOS
+      see_all_work: ACCEDE A TODO MI PORTFOLIO AQUÍ
+  contact:
+    index:
+      fill_out_this_form: RELLENA EL FORMULARIO
+      or_contact_me: O PONTE EN CONTACTO CONMIGO
+      name: Nombre
+      company: Empresa
+      email: Email
+      phone: Teléfono
+      message: Mensaje
   actions:
     create: Crear
     delete: Eliminar

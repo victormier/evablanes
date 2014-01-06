@@ -1,4 +1,30 @@
 ca:
+  shared:
+    header:
+      contact: CONTACTE
+      publications: PUBLICACIONS
+      about_me: SOBRE MI
+      photography: FOTOGRAFIA
+      work: PORTFOLI
+  static:
+    index:
+      see_more: VEURE MÉS
+      featured_projects: PROJECTES DESTACATS
+      about_me: SOBRE MI
+      photography: FOTOGRAFIA
+      publications: PUBLICACIONS
+      coming_soon: PRÒXIMAMENT
+      some_work: ALGUNS PROJECTES
+      see_all_work: ACCEDEIX A TOT EL MEU PORTFOLI AQUÍ
+  contact:
+    index:
+      fill_out_this_form: OMPLE EL FORMULARI
+      or_contact_me: O CONTACTA'M
+      name: Nom
+      company: Empresa
+      email: Email
+      phone: Telèfon
+      message: Missatge
   actions:
     create: Crear
     delete: Eliminar

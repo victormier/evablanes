@@ -2,6 +2,32 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  shared:
+    header:
+      contact: CONTACT
+      publications: PUBLICATIONS
+      about_me: ABOUT ME
+      photography: PHOTOGRAPHY
+      work: WORK
+  static:
+    index:
+      see_more: SEE MORE
+      featured_projects: FEATURED PROJECTS
+      about_me: ABOUT ME
+      photography: PHOTOGRAPHY
+      publications: PUBLICATIONS
+      coming_soon: COMING SOON
+      some_work: SOME OF MY WORK
+      see_all_work: SEE ALL MY WORK HERE
+  contact:
+    index:
+      fill_out_this_form: FILL OUT THIS FORM
+      or_contact_me: OR CONTACT ME
+      name: Name
+      company: Company
+      email: Email
+      phone: Phone number
+      message: Message
   actions:
     create: Create
     delete: Delete
