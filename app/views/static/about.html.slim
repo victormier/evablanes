@@ -1,7 +1,7 @@
 .row
   .span4
     .about-block
-      .about-title ABOUT ME
+      .about-title= t('.about_me')
       p
         | I am a graphic designer from Barcelona based in San Francisco.
       p
@@ -15,7 +15,7 @@
       p
         | Despite working with a big range of projects such us packaging, signage, editorial and typography I’m focused on identity and web design.
     .about-block
-      .about-title AWARDS AND PRESS
+      .about-title= t('.awards_and_press')
       p My final project Ban&Co has been distinguished with:
       p
         | - LAUS Student award 2011 – bronze
@@ -38,7 +38,7 @@
   .span2
     .about-block
       .about-title
-        | CONTACT ME
+        = t('.contact_me')
         span.r-arrow &nbsp;&rarr;
       p eva@evablanes@gmail.com
       p
@@ -51,7 +51,7 @@
         | (415) 687-1771
 
     .about-block
-      .about-title FIND ME IN
+      .about-title= t('.find_me_in')
       .about-link= link_to 'Flickr', 'http://www.flickr.com/photos/evablanes', target: '_blank'
       .about-link= link_to 'Behance', 'http://www.behance.net/evablanes', target: '_blank'
       .about-link= link_to 'LinkedIn', 'http://www.linkedin.com/in/evablanes', target: '_blank'

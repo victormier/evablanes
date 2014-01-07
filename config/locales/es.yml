@@ -6,6 +6,10 @@ es:
       about_me: SOBRE MI
       photography: FOTOGRAFÍA
       work: PORTFOLIO
+    footer:
+      sign_up_to_my_newsletter: APÚNTATE A MI NEWSLETTER
+      promise: PROMETO ENVIAR SÓLO COSAS BONITAS
+      write_your_email: Escribe tu dirección de email
   static:
     index:
       see_more: VER MÁS
@@ -16,6 +20,11 @@ es:
       coming_soon: PRÓXIMAMENTE
       some_work: ALGUNOS PROYECTOS
       see_all_work: ACCEDE A TODO MI PORTFOLIO AQUÍ
+    about:
+      about_me: SOBRE MI
+      awards_and_press: PREMIOS Y PRENSA
+      contact_me: CONTÁCTAME
+      find_me_in: ENCUÉNTRAME EN
   contact:
     index:
       fill_out_this_form: RELLENA EL FORMULARIO

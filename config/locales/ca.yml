@@ -6,6 +6,10 @@ ca:
       about_me: SOBRE MI
       photography: FOTOGRAFIA
       work: PORTFOLI
+    footer:
+      sign_up_to_my_newsletter: APÚNTA'T A LA MEVA NEWSLETTER
+      promise: PROMETO ENVIAR NOMÉS COSES MAQUES
+      write_your_email: Escriu la teva adreça de email
   static:
     index:
       see_more: VEURE MÉS
@@ -16,6 +20,11 @@ ca:
       coming_soon: PRÒXIMAMENT
       some_work: ALGUNS PROJECTES
       see_all_work: ACCEDEIX A TOT EL MEU PORTFOLI AQUÍ
+    about:
+      about_me: SOBRE MI
+      awards_and_press: PREMIS I PREMSA
+      contact_me: CONTACTA'M
+      find_me_in: TROBAM A
   contact:
     index:
       fill_out_this_form: OMPLE EL FORMULARI

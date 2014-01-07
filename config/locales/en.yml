@@ -9,6 +9,10 @@ en:
       about_me: ABOUT ME
       photography: PHOTOGRAPHY
       work: WORK
+    footer:
+      sign_up_to_my_newsletter: SIGN UP TO MY NEWSLETTER
+      promise: I PROMISE TO SEND YOU ONLY NICE THINGS
+      write_your_email: Write your email address
   static:
     index:
       see_more: SEE MORE
@@ -19,6 +23,11 @@ en:
       coming_soon: COMING SOON
       some_work: SOME OF MY WORK
       see_all_work: SEE ALL MY WORK HERE
+    about:
+      about_me: ABOUT ME
+      awards_and_press: AWARDS AND PRESS
+      contact_me: CONTACT ME
+      find_me_in: FIND ME IN
   contact:
     index:
       fill_out_this_form: FILL OUT THIS FORM

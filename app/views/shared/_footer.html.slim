@@ -3,10 +3,10 @@
     .footer-filet= image_tag asset_path('down_arrow.png')
     .footer-newsletter
       span.red
-        ' SIGN UP TO MY NEWSLETTER.
-      | I PROMISE TO SEND YOU ONLY NICE THINGS
+        =' t('.sign_up_to_my_newsletter')
+      = t('.promise')
       .newsletter-form
-        input.newsletter-input.span3(type='text' placeholder='Write your email address.')
+        input.newsletter-input.span3(type='text' placeholder=t('.write_your_email'))
     .footer-social
       ul.social-links
         li.social-link= link_to 'http://www.flickr.com/photos/evablanes', target: '_blank' do
