@@ -2,33 +2,10 @@
   .span4
     .about-block
       .about-title= t('.about_me')
-      p
-        | I am a graphic designer from Barcelona based in San Francisco.
-      p
-        | I work remotely from San Francisco for The Agile Monkeys, an agency based in Las Canarias (Spain). We are developing web, tablet and mobile applications.
-      p
-        | Previously I worked for Firma for three years, a brand and communication agency from Barcelona, where I dealt with national and international clients with a big range of projects.
-      p
-        | I graduated in Graphic Design at Eina, a school of art and design, in 2010. During my last academic year I did an internship at LoSiento.
-      p
-        | I complete my work as a freelance with other clients such as Aixa S.L., Edicions Catalanes, ByHours and Lexika between others.
-      p
-        | Despite working with a big range of projects such us packaging, signage, editorial and typography I’m focused on identity and web design.
+      = @about_me.value.html_safe
     .about-block
       .about-title= t('.awards_and_press')
-      p My final project Ban&Co has been distinguished with:
-      p
-        | - LAUS Student award 2011 – bronze
-        br
-        | - Published in the book: LAUS 2011
-        br
-        | - Selected to be published in SELECT J from INDEX-BOOK 2011
-        br
-        | - Exhibition at “Barra de Ferro” gallery on the EINA school exhibit of “9 projects on account” (December 2010)
-        br
-        br
-      p The typography project “Cursa Barcelona 2008” developed in 2008 is published in the book How to use type from Laurence King Publishing.
-      p The projects Berta Altarriba. Internacional Consultant, Wanted, Ban&Co and Portfoli 2010 are published in the book Bookmeeting from Designerbooks.
+      = @about_awards.value.html_safe
       br
       .about-link
         = link_to projects_path do

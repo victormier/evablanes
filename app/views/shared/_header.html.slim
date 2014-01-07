@@ -16,8 +16,8 @@
                 li.header-language= active_link_to LANGUAGES_BY_LOCALE[locale.to_s], locale_url(:i18n_locale => locale)
 
           ul.header-nav
-            li.header-nav-link= active_link_to 'CONTACT', contact_index_path
-            li.header-nav-link= active_link_to 'PUBLICATIONS', '#'
-            li.header-nav-link= active_link_to 'ABOUT ME', about_path
-            li.header-nav-link= active_link_to 'PHOTOGRAPHY', photos_path
-            li.header-nav-link= active_link_to 'WORK', projects_path
+            li.header-nav-link= active_link_to t('.contact'), contact_index_path
+            /li.header-nav-link= active_link_to t('.publications'), '#'
+            li.header-nav-link= active_link_to t('.about_me'), about_path
+            li.header-nav-link= active_link_to t('.photography'), photos_path
+            li.header-nav-link= active_link_to t('.work'), projects_path

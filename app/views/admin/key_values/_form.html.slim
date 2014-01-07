@@ -1,0 +1,17 @@
+ul.nav.nav-tabs.row-fluid
+  - LANGUAGES.each_with_index do |language, index|
+    li class="#{index == 0 ? 'active' : ''}"
+      = link_to language.first, "##{language.last}", :"data-toggle" => "tab"
+
+.tab-content.row-fluid.trailer
+  - LANGUAGES.map(&:last).each_with_index do |language, index|
+    .tab-pane.multilanguage-attributes id=language class="#{index == 0 ?  'active' : ''}"
+
+      - key_values.each do |key_value|
+
+        = simple_form_for [:admin, key_value], html: { class: "form-horizontal"}, defaults: { wrapper: :with_controls, label_html: { class: 'form--horizontal__control-label' } } do |f|
+
+          = f.input "value_#{language}", label: "#{key_value.key.humanize} (#{language})", as: :redactor
+
+          .controls
+            = f.button :submit, "Guardar", class: 'btn-success'

@@ -25,6 +25,9 @@ Evablanes::Application.routes.draw do
       get :export, :on => :collection
       post :import, :on => :collection
     end
+    resources :key_values, only: [:update]
+    match 'about' => 'static#about', as: :about
+    match 'home' => 'static#home', as: :home
 
     root to: 'projects#index'
   end

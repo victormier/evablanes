@@ -43,13 +43,7 @@
           =' t('.about_me')
           span.r-arrow &rarr;
         .link-block-description
-          |  I’m Eva, a graphic designer from Barcelona based in San Francisco.
-          br
-          | I work remotely for The Agile Monkeys, an agency based in Spain, where I’m designing web, tablet and mobile applications. I’m focused on identity and web design, and I‘m trying to expand my experience joining a company in SF.
-          br
-          ' Feel free to
-          = link_to 'contact me here', contact_index_path
-          | .
+          = @home_about_me.value.html_safe
       .span2
         = link_to photos_path, class: 'link-block-title' do
           =' t('.photography')
@@ -61,7 +55,7 @@
           span.small= t('.coming_soon')
         .link-block-description
           = image_tag asset_path('publications.jpg')
-          | During my professional career, I got one award, and my projects had been publicated in some international books
+          = @home_publications.value.html_safe
 
 .container
   .some_work
