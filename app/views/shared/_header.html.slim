@@ -12,12 +12,9 @@
         .span4
           .header-toplinks
             ul.header-languages
-              - klass = I18n.locale == :en ? 'active' : ''
-              li.header-language= link_to 'English', '#', class: klass
-              - klass = I18n.locale == :ca ? 'active' : ''
-              li.header-language= link_to 'Català', '#', class: klass
-              - klass = I18n.locale == :es ? 'active' : ''
-              li.header-language= link_to 'Castellano', '#', class: klass
+              - LOCALES.each do |locale|
+                li.header-language= active_link_to LANGUAGES_BY_LOCALE[locale.to_s], locale_url(:i18n_locale => locale)
+
           ul.header-nav
             li.header-nav-link= active_link_to 'CONTACT', contact_index_path
             li.header-nav-link= active_link_to 'PUBLICATIONS', '#'
