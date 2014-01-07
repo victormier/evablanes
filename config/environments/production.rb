@@ -23,6 +23,9 @@ Evablanes::Application.configure do
   # Set default asset cache expire time
   config.static_cache_control = "public, max-age=3600"
 
+  # Google Analytics
+  GA.tracker = "UA-23886876-1"
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

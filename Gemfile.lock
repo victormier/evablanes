@@ -103,6 +103,7 @@ GEM
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.4)
+    google-analytics-rails (0.0.4)
     guard (1.8.1)
       formatador (>= 0.2.4)
       listen (>= 1.0.0)
@@ -281,6 +282,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.2.1)
   fog
+  google-analytics-rails
   guard-livereload
   i18n-active_record!
   i18n_routing

@@ -66,3 +66,8 @@ group :development do
   gem 'rack-livereload'
   gem 'rb-fsevent',       require: false
 end
+
+# Production
+group :production do
+  gem 'google-analytics-rails'
+end
