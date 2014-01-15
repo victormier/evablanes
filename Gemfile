@@ -42,6 +42,7 @@ gem 'fog'
 
 # Integrations
 gem 'mailchimp-api', require: 'mailchimp'
+gem 'newrelic_rpm'
 
 group :assets do
   # CSS and JS
