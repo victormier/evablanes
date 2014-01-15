@@ -43,6 +43,8 @@ Evablanes::Application.routes.draw do
       match 'about' => 'static#about', as: :about
     end
 
+    post 'newsletter' => 'newsletter#subscribe', as: 'newsletter_subscribe'
+
     # Sessions
     get 'logout' => 'sessions#destroy', as: 'logout'
     get 'login' => 'sessions#new', as: 'login'

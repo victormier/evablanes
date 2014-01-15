@@ -6,7 +6,10 @@
         =' t('.sign_up_to_my_newsletter')
       = t('.promise')
       .newsletter-form
-        input.newsletter-input.span3(type='text' placeholder=t('.write_your_email'))
+        = form_tag newsletter_subscribe_path, id: 'newsletter_form' do
+          = text_field_tag('email', nil, placeholder: t('.write_your_email'), class: 'newsletter-input span3' )
+          a.newsletter-link(href="javascript;")
+            span.r-arrow &rarr;
     .footer-social
       ul.social-links
         li.social-link= link_to 'http://www.flickr.com/photos/evablanes', target: '_blank' do
