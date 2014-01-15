@@ -7,4 +7,6 @@ $(function() {
     event.preventDefault();
     $(this).parents('form').submit();
   })
+
+  $('textarea').autoGrow();
 });
