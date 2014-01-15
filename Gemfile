@@ -40,6 +40,9 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 
+# Integrations
+gem 'mailchimp-api', require: 'mailchimp'
+
 group :assets do
   # CSS and JS
   gem 'sass'
