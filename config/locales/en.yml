@@ -37,6 +37,10 @@ en:
       email: Email
       phone: Phone number
       message: Message
+  projects:
+    show:
+      back_to_all_projects: BACK TO ALL PROJECTS
+      next_project: NEXT PROJECT
   actions:
     create: Create
     delete: Delete

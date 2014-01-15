@@ -34,6 +34,10 @@ ca:
       email: Email
       phone: Telèfon
       message: Missatge
+  projects:
+    show:
+      back_to_all_projects: TOTS ELS PROJECTES
+      next_project: SEGÜENT PROJECTE
   actions:
     create: Crear
     delete: Eliminar

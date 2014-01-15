@@ -31,6 +31,7 @@ class Project < ActiveRecord::Base
   scope :published, where(published: true)
   scope :in_slider, where(in_slider: true)
   scope :featured, where(featured: true)
+  scope :after, lambda{ |project| where('sort_order > ?', project.sort_order) }
 
   def to_param
     slug
@@ -38,6 +39,10 @@ class Project < ActiveRecord::Base
 
   def self.find_for_show(slug)
     find_by_slug(slug)
+  end
+
+  def next_or_first
+    Project.published.ordered.after(self).first || Project.published.ordered.first
   end
 
   private

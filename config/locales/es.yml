@@ -34,6 +34,10 @@ es:
       email: Email
       phone: Teléfono
       message: Mensaje
+  projects:
+    show:
+      back_to_all_projects: TODOS LOS PROYECTOS
+      next_project: SIGUIENTE PROYECTO
   actions:
     create: Crear
     delete: Eliminar

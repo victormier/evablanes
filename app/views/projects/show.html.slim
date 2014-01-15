@@ -8,3 +8,15 @@
 .project-pictures
   - @project.project_pictures.ordered.each do |project_picture|
     .project-picture= image_tag project_picture.picture.full_width
+.project-navigation-links
+  .row
+    .span3.project-all-link
+      .action-link
+        = link_to projects_path do
+          span.l-arrow &larr;&nbsp;
+          =' t('.back_to_all_projects')
+    .span3.project-next-link
+      .action-link
+        = link_to project_path(@project.next_or_first) do
+          =' t('.next_project')
+          span.r-arrow &nbsp;&rarr;
