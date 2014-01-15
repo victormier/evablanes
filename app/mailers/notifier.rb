@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 class Notifier < ActionMailer::Base
-  default :from => "Base <victormier@gmail.com>", :charset => "utf-8"
+  default :from => "Eva Blanes <eva@evablanes.com>", :charset => "utf-8"
 
   def reset_password_email(user)
     @user = user
@@ -16,6 +16,6 @@ class Notifier < ActionMailer::Base
     @phone = phone
     @message = message
 
-    mail(to: 'victormier@gmail.com', subject: 'WEB EVA BLANES: Nova sol·licitud de contacte')
+    mail(to: 'eva@evablanes.com', subject: 'WEB EVA BLANES: Nova sol·licitud de contacte')
   end
 end
