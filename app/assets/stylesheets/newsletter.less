@@ -1,0 +1,136 @@
+@red:       rgb(255, 156, 152);
+@grayLight: #A7A7AA;
+
+#newsletter-container {
+  width: 600px;
+  margin: 0 auto;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  color: @grayLight;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#newsletter-header {
+  z-index: 100;
+}
+#newsletter-preheader {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.filet {
+  border-top: 1px solid @grayLight;
+  margin: 40px 0;
+}
+.spacer40px {
+  height: 40px;
+}
+#newsletter-preheader-subtitle {
+  color: @red;
+}
+#newsletter-title {
+  position: relative;
+  color: @red;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#newsletter-content {
+  z-index: 0;
+}
+.newsletter-action {
+  display: inline-block;
+  background-color: @red;
+  padding: 5px 10px;
+  font-weight: 200;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.newsletter-image {
+  max-width: 100%;
+  width: 100%;
+}
+.newsletter-headline {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  line-height: 1;
+  color: @red;
+}
+#newsletter-subtitle {
+  margin-bottom: 30px;
+
+  a {
+    font-size: 36px;
+    font-weight: bold;
+    color: @red;
+    text-decoration: none;
+  }
+}
+#newsletter-projects {
+  overflow: auto;
+  margin-bottom: 40px;
+}
+.newsletter-project {
+  float: left;
+  width: 47.5%;
+  text-align: left;
+
+  &.newsletter-project-first {
+    margin-right: 5%;
+  }
+}
+.newsletter-project-image {
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+  }
+}
+.newsletter-project-title {
+  margin-bottom: 20px;
+  color: @red;
+}
+.newsletter-project-text {
+  margin-bottom: 20px;
+}
+.newsletter-project-action {
+}
+#newsletter-action {
+  margin-bottom: 40px;
+
+  a {
+    display: inline-block;
+    background-color: @red;
+    padding: 10px 15px;
+    font-weight: 200;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
+#newsletter-text {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+#newsletter-footer {
+}
+#newsletter-social-links {
+  margin: 20px 0 20px 0;
+  list-style: none;
+  padding: 0;
+}
+.newsletter-social-link {
+  display: inline-block;
+  margin: 0 7px;
+
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

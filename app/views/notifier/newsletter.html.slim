@@ -1,0 +1,51 @@
+#newsletter-container
+  #newsletter-header
+    #newsletter-preheader
+      | Eva Blanes
+      br
+      #newsletter-preheader-subtitle Graphic design &amp; Art direction
+    #newsletter-title
+      | NEWSLETTER AUGUST '14
+
+  #newsletter-content
+    .newsletter-image
+      = image_tag '/mailing/project_showcase.gif'
+
+    .filet
+
+    .newsletter-headline
+      | WORKING ON NEW PROJECTS
+    #newsletter-projects
+      .newsletter-project.newsletter-project-first
+        .newsletter-project-image= image_tag '/mailing/project_showcase.gif'
+        .newsletter-project-title CITY WINERY
+        .newsletter-project-text
+          | Design application for Learning pills, an international company with the mission of developing high quality professional and personal development courses. this application has a different range of subjects, and each one has 90 videos of 2 minutes.
+        .newsletter-project-action= link_to 'VISIT HERE →', 'http://www.evablanes.com', class: 'newsletter-action'
+      .newsletter-project
+        .newsletter-project-image= image_tag '/mailing/project_showcase.gif'
+        .newsletter-project-title CITY WINERY
+        .newsletter-project-text
+          | Design application for Learning pills, an international company with the mission of developing high quality professional and personal development courses. this application has a different range of subjects, and each one has 90 videos of 2 minutes.
+        .newsletter-project-action= link_to 'VISIT HERE →', 'http://www.evablanes.com', class: 'newsletter-action'
+
+    .filet
+
+    .newsletter-headline
+      | AND TAKING NEW PHOTOS
+    .newsletter-image
+      = image_tag '/mailing/project_showcase.gif'
+    .spacer40px
+    .newsletter-action
+      = link_to 'ENJOY PHOTOS HERE →', 'http://www.evablanes.com', class: 'newsletter-action'
+
+  .filet
+
+  #newsletter-footer
+    ul#newsletter-social-links
+      li.newsletter-social-link= link_to 'http://www.flickr.com/photos/evablanes', target: '_blank' do
+        = image_tag asset_path('social_flickr.png')
+      li.newsletter-social-link= link_to 'http://www.linkedin.com/in/evablanes', target: '_blank' do
+        = image_tag asset_path('social_linkedin.png')
+      li.newsletter-social-link= link_to 'http://www.behance.net/evablanes', target: '_blank' do
+        = image_tag asset_path('social_behance.png')

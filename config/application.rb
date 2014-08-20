@@ -57,7 +57,7 @@ module Evablanes
     config.assets.enabled = true
 
     # Assets to precompile
-    config.assets.precompile += ['backoffice.css', 'backoffice.js']
+    config.assets.precompile += ['backoffice.css', 'backoffice.js', 'newsletter.css']
 
     # Heroku config
     config.assets.initialize_on_precompile = false

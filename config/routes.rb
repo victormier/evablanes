@@ -29,6 +29,10 @@ Evablanes::Application.routes.draw do
     match 'about' => 'static#about', as: :about
     match 'home' => 'static#home', as: :home
 
+    if Rails.env.development?
+      mount MailPreview => 'mail_view'
+    end
+
     root to: 'projects#index'
   end
 
