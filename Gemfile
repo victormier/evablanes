@@ -34,6 +34,7 @@ gem 'i18n-active_record', :git => "git://github.com/rogercampos/i18n-active_reco
 # Utils
 gem 'roo'
 gem 'ranked-model'
+gem 'roadie-rails'
 
 # File management
 gem 'carrierwave'
