@@ -11,7 +11,7 @@ class ProjectPicture < ActiveRecord::Base
 
   scope :ordered, rank(:sort_order)
 
-  attr_accessible :picture
+  attr_accessible :picture, :project
 
   private
 

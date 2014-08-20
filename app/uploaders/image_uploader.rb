@@ -6,18 +6,22 @@ class ImageUploader < BaseUploader
   # Custom methods
   def set_width(width)
     manipulate! do |img|
-      scale = width.to_f / img['width'].to_f
-      new_height = img['height'].to_f * scale
-      img.resize("#{width}x#{new_height}")
+      unless img.mime_type.match /gif/
+        scale = width.to_f / img['width'].to_f
+        new_height = img['height'].to_f * scale
+        img.resize("#{width}x#{new_height}")
+      end
       img
     end
   end
 
   def set_height(height)
     manipulate! do |img|
-      scale = height.to_f / img['height'].to_f
-      new_width = img['width'].to_f * scale
-      img.resize("#{new_width}x#{height}")
+      unless img.mime_type.match /gif/
+        scale = height.to_f / img['height'].to_f
+        new_width = img['width'].to_f * scale
+        img.resize("#{new_width}x#{height}")
+      end
       img
     end
   end
