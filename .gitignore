@@ -29,3 +29,6 @@ doc/styles/npm-debug.log
 
 # Ignore some configuration files
 config/initializers/setup_mail.rb
+
+# Ignore rvm config
+.rvmrc
