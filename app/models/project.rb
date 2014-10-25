@@ -14,7 +14,7 @@ class Project < ActiveRecord::Base
   mount_uploader :slider_picture, SliderPictureUploader
 
   validates_presence_of :title_en, :title_es, :title_ca, :cover_picture
-  validates_uniqueness_of :title, :slug
+  validates_uniqueness_of :title
 
   attr_accessible :title_en, :title_es, :title_ca, :subtitle_en, :subtitle_es, :subtitle_ca,
     :description_en, :description_es, :description_ca,
@@ -22,10 +22,8 @@ class Project < ActiveRecord::Base
     :slider_order, :featured_order
 
   before_validation :set_order, on: :create
+  before_save :set_slug, on: :create
   after_save :reload_armot!
-
-  include SlugBuilder
-  build_slug column_name: :title
 
   scope :ordered, rank(:sort_order)
   scope :featured_ordered, order(:featured_order)
@@ -51,5 +49,13 @@ class Project < ActiveRecord::Base
 
   def set_order
     self.update_attribute :sort_order_position, :last
+  end
+
+  def set_slug
+    LOCALES.each do |locale|
+      I18n.with_locale(locale) do
+        self.slug = title.parameterize
+      end
+    end
   end
 end
