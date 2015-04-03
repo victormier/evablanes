@@ -15,6 +15,7 @@ class Project < ActiveRecord::Base
 
   validates_presence_of :title_en, :title_es, :title_ca, :cover_picture
   validates_uniqueness_of :title, :slug
+  validates_presence_of :slider_picture, if: :in_slider
 
   attr_accessible :title_en, :title_es, :title_ca, :subtitle_en, :subtitle_es, :subtitle_ca,
     :description_en, :description_es, :description_ca,
