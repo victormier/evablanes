@@ -32,7 +32,11 @@ class Admin::PhotosController < Admin::ApplicationController
   def sort
     @photo.update_attribute :sort_order_position, params[:sort_order_position]
 
-    render nothing: true
+    if params[:redirect]
+      redirect_to :back
+    else
+      render nothing: true
+    end
   end
 
   def toggle_published
