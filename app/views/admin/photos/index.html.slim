@@ -21,7 +21,7 @@ project-pictures-list
                 = link_to copy, toggle_published_admin_photo_path(photo.id), :method => :post, class: "btn btn-mini #{klass}"
             td= image_tag photo.picture.mini.url
             td
-              = link_to ' ↑ ', sort_admin_photo_path(photo, sort_order_position: :first), :method => :post, :class => "btn btn-mini pull-right"
+              = link_to ' ↑ ', sort_admin_photo_path(id: photo.id, sort_order_position: :first), :method => :post, :class => "btn btn-mini pull-right"
               = link_to 'Delete', [:admin, photo], :confirm => "N'estàs segur?", :method => :delete, :class => "btn btn-danger btn-mini pull-right"
   - else
     #none.well No hi ha imatges
