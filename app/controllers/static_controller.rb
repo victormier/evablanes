@@ -21,7 +21,7 @@ class StaticController < ApplicationController
   private
 
   def some_projects
-    some_projects = Project.published.ordered.limit(9)
+    some_projects = Project.published.ordered
     while some_projects.map(&:cover_cols).map(&:to_i).sum % 6 != 0
       some_projects.pop
     end

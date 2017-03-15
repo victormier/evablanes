@@ -18,51 +18,51 @@
       a.slider-control.right(href="#project-slider" data-slide="next")
         = image_tag asset_path('slider_right_arr.png')
 
-- if @featured_projects.any?
-  .container
-    .featured-projects
-      .featured-projects-title.filet-title
-        span.filet-title-text= t('.featured_projects')
+//- if @featured_projects.any?
+//  .container
+//    .featured-projects
+//      .featured-projects-title.filet-title
+//        span.filet-title-text= t('.featured_projects')
+//
+//      .row
+//        - @featured_projects.each do |project|
+//          .span2
+//            .featured-project
+//              .featured-project-image= link_to project_path(project) do
+//                = image_tag project.featured_project_picture.standard
+//              .featured-project-title= link_to project_path(project) do
+//                =' project.title.upcase
+//                | &rarr;
+//              .featured-project-description= project.description.html_safe
 
-      .row
-        - @featured_projects.each do |project|
-          .span2
-            .featured-project
-              .featured-project-image= link_to project_path(project) do
-                = image_tag project.featured_project_picture.standard
-              .featured-project-title= link_to project_path(project) do
-                =' project.title.upcase
-                | &rarr;
-              .featured-project-description= project.description.html_safe
-
-.link-block
-  .container
-    .row
-      .span2
-        = link_to about_path, class: 'link-block-title' do
-          =' t('.about_me')
-          span.r-arrow &rarr;
-        .link-block-description
-          = @home_about_me.value.html_safe
-      .span2
-        = link_to photos_path, class: 'link-block-title' do
-          =' t('.photography')
-          span.r-arrow &rarr;
-        .link-block-description= image_tag asset_path('home_photography.jpg')
-      .span2
-        = link_to about_path, class: 'link-block-title' do
-          =' t('.publications')
-          span.small= t('.coming_soon')
-        .link-block-description
-          = image_tag asset_path('publications.jpg')
-          = @home_publications.value.html_safe
+//.link-block
+//  .container
+//    .row
+//      .span2
+//        = link_to about_path, class: 'link-block-title' do
+//          =' t('.about_me')
+//          span.r-arrow &rarr;
+//        .link-block-description
+//          = @home_about_me.value.html_safe
+//      .span2
+//        = link_to photos_path, class: 'link-block-title' do
+//          =' t('.photography')
+//          span.r-arrow &rarr;
+//        .link-block-description= image_tag asset_path('home_photography.jpg')
+//      .span2
+//        = link_to about_path, class: 'link-block-title' do
+//          =' t('.publications')
+//          span.small= t('.coming_soon')
+//        .link-block-description
+//          = image_tag asset_path('publications.jpg')
+//          = @home_publications.value.html_safe
 
 .container
   .some_work
-    .some_work-projects-title.filet-title
-          span.filet-title-text= t('.some_work')
+    //.some_work-projects-title.filet-title
+    //      span.filet-title-text= t('.some_work')
     = render 'projects/project_list', projects: @some_projects
-    .some_work-link.action-link
-      = link_to projects_path do
-        =' t('.see_all_work')
-        span.r-arrow &nbsp;&rarr;
+    // .some_work-link.action-link
+    //   = link_to projects_path do
+    //     =' t('.see_all_work')
+    //     span.r-arrow &nbsp;&rarr;
