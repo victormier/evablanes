@@ -5,8 +5,8 @@ ADMIN_LOCALE = :ca
 
 LANGUAGES_BY_LOCALE = {
   "en" => 'English',
-  "es" => 'Castellano',
-  "ca" => 'Català'
+  "ca" => 'Català',
+  "es" => 'Castellano'
 }
 
 LANGUAGES = LANGUAGES_BY_LOCALE.to_a.map(&:reverse)

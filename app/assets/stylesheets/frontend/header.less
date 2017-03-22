@@ -1,40 +1,91 @@
 .header {
   padding: @basePadding*1.5 0;
-  border-bottom: 1px solid @grayLight;
 }
 a {
   .header-title, .header-subtitle {
     font-size: 20px;
     line-height: 24px;
-    font-weight: 800;
+    font-weight: 700;
     color: @textColor;
+    letter-spacing: 1px;
   }
   .header-subtitle {
     color: @gray;
-    letter-spacing: 0px;
+    font-weight: 200;
   }
 }
 
-.header-toplinks {
-  margin-bottom: 50px;
+.header-right {
+  padding-top: 14px;
+}
+
+.header-language-links {
   text-align: right;
+  float: right;
+  border-left: 1px solid @gray;
+  overflow: visible;
+  font-size: 12px;
+  font-weight: 700px;
+
+  a.dropdown-toggle {
+    margin-left: @basePadding;
+    color: @gray;
+    font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+      min-width: 100px;
+      padding: 5px 0;
+      margin: 2px 0 0;
+      list-style: none;
+      background-color: #ffffff;
+      border: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box;
+
+      > li > a {
+        padding: 3px 0;
+        font-weight: 700;
+
+        &:hover {
+          background: white;
+          color: @gray;
+        }
+      }
+  }
 }
 .header-languages, .header-nav {
   margin: 0;
   list-style: none;
-  font-weight: 200;
 
-  .header-language, .header-nav-link {
-    float: right;
-    margin-left: @basePadding;
+  .header-language, .header-nav-link a {
+    color: @gray;
 
-    a {
+    &:hover, &.active {
+      text-decoration: none;
       color: @gray;
-
-      &:hover, &.active {
-        text-decoration: none;
-        color: @gray;
-      }
     }
   }
+  .header-nav-link {
+    float: right;
+    margin-left: @basePadding;
+  }
+}
+ul.header-nav {
+  overflow: auto;
+  padding-right: @basePadding;
+  font-size: 15px;
+  letter-spacing: 2px;
 }
