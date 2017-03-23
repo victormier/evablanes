@@ -22,9 +22,9 @@ class StaticController < ApplicationController
 
   def some_projects
     some_projects = Project.published.ordered
-    while some_projects.map(&:cover_cols).map(&:to_i).sum % 6 != 0
-      some_projects.pop
-    end
-    some_projects
+    # while some_projects.map(&:cover_cols).map(&:to_i).sum % 6 != 0
+    #   some_projects.pop
+    # end
+    # some_projects
   end
 end
