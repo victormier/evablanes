@@ -1,12 +1,10 @@
-.project-information
-  .row
-    .span3
-      .project-title= @project.title.upcase
-      .project-subtitle= @project.subtitle.html_safe
-    .span3
-      .project-description= @project.description.html_safe
+.project-picture.first-picture= image_tag @project.project_pictures.ordered.first.picture.full_width
+.project-information.text-center
+  .project-title= @project.title.upcase
+  .project-subtitle= @project.subtitle.html_safe
+  .project-description= @project.description.html_safe
 .project-pictures
-  - @project.project_pictures.ordered.each do |project_picture|
+  - @project.project_pictures.ordered.drop(1).each do |project_picture|
     .project-picture= image_tag project_picture.picture.full_width
 .project-navigation-links
   .row

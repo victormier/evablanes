@@ -4,9 +4,17 @@
       margin-bottom: @basePadding*2;
       font-weight: 200;
     }
-    .project-title, .project-subtitle {
-      font-size: 22px;
+    .project-title {
+      font-size: 18px;
+      letter-spacing: 2px;
+      // margin-bottom: @basePadding;
+      font-weight: bold;
+    }
+
+    .project-subtitle {
+      font-size: 16px;
       line-height: 28px;
+      margin-bottom: @basePadding*2;
     }
     .project-title {
       color: @gray;
@@ -20,6 +28,10 @@
 
       img {
         width: 100%;
+      }
+
+      &.first-picture {
+        margin-bottom: @basePadding*2;
       }
     }
     .project-navigation-links {
