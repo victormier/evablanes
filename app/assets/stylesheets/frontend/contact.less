@@ -1,42 +1,36 @@
 .contact-index {
+  padding-top: @basePadding*3;
   margin-bottom: @basePadding*2;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 24px;
+  line-height: 30px;
+}
+.contact-title, .contact-subtitle {
+  font-weight: bold;
+  margin-bottom: @basePadding;
 }
 .contact-title {
+  letter-spacing: 2px;
+}
+.contact-subtitle {
+  letter-spacing: 1px;
+  margin-bottom: @basePadding*3;
+}
+.contact-item {
+  font-weight: 200;
   margin-bottom: @basePadding;
-  color: @gray;
 }
-.contact-form_unit {
-  margin-bottom: @basePadding/2;
 
-  .contact-form_label, .contact-form_input {
-    margin-bottom: @basePadding/2;
-  }
-  .contact-form_label label {
-    font-weight: 200;
-  }
-  .contact-form_input {
-    input, textarea {
-      border-radius: 0;
-      border: 1px solid @grayLight;
-      box-shadow: none;
-      font-weight: 200;
-    }
+.contact-item-last {
+  margin-bottom: @basePadding*2;
+}
+.contact-hr {
+  border-top: 1px solid black;
+}
+.about-social-links {
+  margin-top: @basePadding*2;
 
-    textarea {
-      height: 600px;
-    }
-  }
-}
-.contact-form_actions {
-  margin-top: @basePadding;
-  text-align: right;
-}
-.contact-thanks {
-  text-align: center;
-  padding: @basePadding*2 0;
-  .red {
-    margin-bottom: @basePadding;
+  .about-link {
+    display: inline-block;
+    margin: 0 20px;
   }
 }

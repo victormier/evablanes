@@ -1,35 +1,19 @@
-.contact-index.row
-  .span4
-    .contact-form
-      .contact-title= t('.fill_out_this_form')
-
-      = form_tag contact_index_path do
-        .contact-form_unit
-          .contact-form_label= label_tag= t('.name')
-          .contact-form_input= text_field_tag :name, nil, class: 'span4'
-        .contact-form_unit
-          .contact-form_label= label_tag= t('.company')
-          .contact-form_input= text_field_tag :company, nil, class: 'span4'
-        .contact-form_unit
-          .contact-form_label= label_tag= t('.email')
-          .contact-form_input= text_field_tag :email, nil, class: 'span4'
-        .contact-form_unit
-          .contact-form_label= label_tag= t('.phone')
-          .contact-form_input= text_field_tag :phone, nil, class: 'span4'
-        .contact-form_unit
-          .contact-form_label= label_tag= t('.message')
-          .contact-form_input= text_area_tag :message, nil, class: 'span4'
-        .contact-form_actions
-          = submit_tag 'SUBMIT', class: 'btn'
-
-  .span2
-    .contact-title= t('.or_contact_me')
-    p eva@evablanes.com
-    p
-      | San Francisco
+.contact-index
+  .text-center
+    .contact-title HOLA!
+    .contact-subtitle
+      | Do you have any projects or collaboration
       br
-      | (415) 272-5447
-    p
-      | Barcelona
-      br
-      | (+34) 619 48 91 37
+      | in mind that I can help you with? Drop me a line!
+    .contact-item +34 619 48 91 37
+    .contact-item evablanes@gmail.com
+    .contact-item.contact-item-last Barcelona &nbsp;&nbsp;|&nbsp;&nbsp; San Francisco
+
+    .row
+      .span2.offset2
+        hr.contact-hr
+
+    .about-social-links
+      .about-link= link_to 'Behance', 'https://www.behance.net/evablanes', target: '_blank'
+      .about-link= link_to 'LinkedIn', 'https://www.linkedin.com/in/evablanes', target: '_blank'
+      .about-link= link_to 'Instagram', 'https://www.instagram.com/evablanes/', target: '_blank'
