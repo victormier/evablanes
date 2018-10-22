@@ -5,7 +5,8 @@
   .project-description= @project.description.html_safe
 .project-pictures
   - @project.project_pictures.ordered.drop(1).each do |project_picture|
-    .project-picture= image_tag project_picture.picture.full_width
+    - unless project_picture.picture.blank?
+      .project-picture= image_tag project_picture.picture.full_width
 .project-navigation-links
   .row
     .span3.project-all-link

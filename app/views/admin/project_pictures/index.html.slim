@@ -15,7 +15,11 @@ project-pictures-list
       thbody
         - @project_pictures.each do |pic|
           tr.item(item_id=pic.id)
-            td= image_tag pic.picture.mini.url
+            td
+              - if pic.picture.blank?
+                | "NO PIC"
+              - else
+                = image_tag pic.picture.mini.url
             td
               = link_to 'Delete', [:admin, pic], :confirm => "N'estàs segur?", :method => :delete, :class => "btn btn-danger btn-mini pull-right"
   - else
