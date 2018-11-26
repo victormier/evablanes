@@ -30,7 +30,7 @@
               | No picture
           td= project.cover_cols
           td= project.title
-          td= project.subtitle.html_safe
+          td= project.subtitle.try(:html_safe)
           td
             = link_to t('delete', scope: 'actions'), admin_project_path(project.id), confirm: t('you_sure', scope: 'actions'), :method => :delete, class: "btn btn-danger btn-small pull-right"
             = link_to t('edit', scope: 'actions'), edit_admin_project_path(project.id), class: "btn btn-warning btn-small pull-right"

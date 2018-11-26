@@ -1,8 +1,8 @@
 .project-picture.first-picture= image_tag @project.project_pictures.ordered.first.picture.full_width
 .project-information.text-center
   .project-title= @project.title.upcase
-  .project-subtitle= @project.subtitle.html_safe
-  .project-description= @project.description.html_safe
+  .project-subtitle= @project.subtitle.try(:html_safe)
+  .project-description= @project.description.try(:html_safe)
 .project-pictures
   - @project.project_pictures.ordered.drop(1).each do |project_picture|
     - unless project_picture.picture.blank?
