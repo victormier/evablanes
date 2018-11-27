@@ -16,10 +16,11 @@ a {
 }
 
 .header-right {
-  padding-top: 14px;
+  padding-top: 5px;
 }
 
 .header-language-links {
+  display: none;
   text-align: right;
   float: right;
   border-left: 1px solid @gray;
@@ -71,10 +72,12 @@ a {
   list-style: none;
 
   .header-language, .header-nav-link a {
+    font-family: @sansFontFamily;
+    font-weight: 300;
     color: @gray;
 
     &:hover, &.active {
-      text-decoration: none;
+      text-decoration: underline;
       color: @gray;
     }
   }
@@ -85,7 +88,7 @@ a {
 }
 ul.header-nav {
   overflow: auto;
-  padding-right: @basePadding;
+  // padding-right: @basePadding;
   font-size: 15px;
   letter-spacing: 2px;
 }
