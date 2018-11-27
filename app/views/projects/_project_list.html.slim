@@ -5,4 +5,4 @@
         = link_to project_path(project) do
           = image_tag project.cover_picture.send("cols_#{project.cover_cols}"), class: 'project-cover-image'
           .project-hover-title(class="project-cover-title-#{project.cover_cols}")
-            = project.cover_title.upcase.html_safe unless project.cover_title.nil?
+            = project.cover_title.try(:html_safe) unless project.cover_title.nil?
