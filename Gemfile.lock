@@ -89,7 +89,7 @@ GEM
       http_parser.rb (~> 0.5.3)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.39.5)
+    excon (0.71.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.7)
